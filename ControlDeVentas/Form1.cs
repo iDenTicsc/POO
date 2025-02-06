@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ControlDeVentas
 {
-    public partial class Form1 : Form
+    public partial class frmVentas : Form
     {
-        public Form1()
+        public frmVentas()
         {
             InitializeComponent();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
