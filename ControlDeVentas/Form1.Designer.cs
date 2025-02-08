@@ -251,6 +251,8 @@
             this.colSubtotal,
             this.colDescuento,
             this.colNeto});
+            this.lvRegistro.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvRegistro.GridLines = true;
             this.lvRegistro.HideSelection = false;
             this.lvRegistro.Location = new System.Drawing.Point(14, 308);
             this.lvRegistro.Name = "lvRegistro";
