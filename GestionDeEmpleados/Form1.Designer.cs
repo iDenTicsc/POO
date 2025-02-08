@@ -36,16 +36,16 @@
             this.btnAgregarE = new System.Windows.Forms.Button();
             this.lvMostrarE = new System.Windows.Forms.ListView();
             this.colNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnSalir = new System.Windows.Forms.Button();
             this.colTipoE = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colSalario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(104, 9);
+            this.label1.Location = new System.Drawing.Point(110, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(362, 40);
             this.label1.TabIndex = 0;
@@ -54,7 +54,7 @@
             // tbNombreE
             // 
             this.tbNombreE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNombreE.Location = new System.Drawing.Point(43, 136);
+            this.tbNombreE.Location = new System.Drawing.Point(61, 136);
             this.tbNombreE.Name = "tbNombreE";
             this.tbNombreE.Size = new System.Drawing.Size(185, 29);
             this.tbNombreE.TabIndex = 2;
@@ -63,7 +63,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(22, 95);
+            this.label2.Location = new System.Drawing.Point(40, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(228, 25);
             this.label2.TabIndex = 1;
@@ -73,7 +73,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(311, 95);
+            this.label3.Location = new System.Drawing.Point(329, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 25);
             this.label3.TabIndex = 3;
@@ -81,9 +81,10 @@
             // 
             // cobTipoE
             // 
+            this.cobTipoE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cobTipoE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cobTipoE.FormattingEnabled = true;
-            this.cobTipoE.Location = new System.Drawing.Point(313, 136);
+            this.cobTipoE.Location = new System.Drawing.Point(331, 136);
             this.cobTipoE.Name = "cobTipoE";
             this.cobTipoE.Size = new System.Drawing.Size(185, 29);
             this.cobTipoE.TabIndex = 4;
@@ -91,12 +92,13 @@
             // btnAgregarE
             // 
             this.btnAgregarE.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnAgregarE.Location = new System.Drawing.Point(178, 181);
+            this.btnAgregarE.Location = new System.Drawing.Point(191, 181);
             this.btnAgregarE.Name = "btnAgregarE";
             this.btnAgregarE.Size = new System.Drawing.Size(182, 41);
             this.btnAgregarE.TabIndex = 5;
             this.btnAgregarE.Text = "Agregar empleado";
             this.btnAgregarE.UseVisualStyleBackColor = true;
+            this.btnAgregarE.Click += new System.EventHandler(this.btnAgregarE_Click);
             // 
             // lvMostrarE
             // 
@@ -119,16 +121,6 @@
             this.colNombre.Text = "Nombre";
             this.colNombre.Width = 180;
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnSalir.Location = new System.Drawing.Point(178, 486);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(182, 41);
-            this.btnSalir.TabIndex = 7;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            // 
             // colTipoE
             // 
             this.colTipoE.Text = "Tipo Empleado";
@@ -138,6 +130,17 @@
             // 
             this.colSalario.Text = "Salario";
             this.colSalario.Width = 176;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnSalir.Location = new System.Drawing.Point(192, 486);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(182, 41);
+            this.btnSalir.TabIndex = 7;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Form1
             // 
@@ -155,6 +158,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
