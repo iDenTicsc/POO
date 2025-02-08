@@ -30,19 +30,21 @@
         {
             this.lblVentas = new System.Windows.Forms.Label();
             this.gbDatosCliente = new System.Windows.Forms.GroupBox();
-            this.lblCliente = new System.Windows.Forms.Label();
             this.tbCliente = new System.Windows.Forms.TextBox();
+            this.lblCliente = new System.Windows.Forms.Label();
             this.lblTituloFecha = new System.Windows.Forms.Label();
             this.lblTituloHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.gbDatosVenta = new System.Windows.Forms.GroupBox();
-            this.lblProducto = new System.Windows.Forms.Label();
-            this.cobProducto = new System.Windows.Forms.ComboBox();
-            this.lblTituloPrecio = new System.Windows.Forms.Label();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.tbCantidad = new System.Windows.Forms.TextBox();
+            this.lblTituloCantidad = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.lblTituloPrecio = new System.Windows.Forms.Label();
+            this.cobProducto = new System.Windows.Forms.ComboBox();
+            this.lblProducto = new System.Windows.Forms.Label();
             this.lvRegistro = new System.Windows.Forms.ListView();
             this.colProducto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colCantidad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -72,13 +74,21 @@
             this.gbDatosCliente.Controls.Add(this.tbCliente);
             this.gbDatosCliente.Controls.Add(this.lblCliente);
             this.gbDatosCliente.Location = new System.Drawing.Point(14, 52);
-            this.gbDatosCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatosCliente.Margin = new System.Windows.Forms.Padding(4);
             this.gbDatosCliente.Name = "gbDatosCliente";
-            this.gbDatosCliente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatosCliente.Padding = new System.Windows.Forms.Padding(4);
             this.gbDatosCliente.Size = new System.Drawing.Size(459, 116);
             this.gbDatosCliente.TabIndex = 1;
             this.gbDatosCliente.TabStop = false;
             this.gbDatosCliente.Text = "DATOS DEL CLIENTE";
+            // 
+            // tbCliente
+            // 
+            this.tbCliente.Location = new System.Drawing.Point(8, 56);
+            this.tbCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.tbCliente.Name = "tbCliente";
+            this.tbCliente.Size = new System.Drawing.Size(443, 25);
+            this.tbCliente.TabIndex = 1;
             // 
             // lblCliente
             // 
@@ -90,61 +100,54 @@
             this.lblCliente.TabIndex = 0;
             this.lblCliente.Text = "CLIENTE";
             // 
-            // tbCliente
-            // 
-            this.tbCliente.Location = new System.Drawing.Point(8, 56);
-            this.tbCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbCliente.Name = "tbCliente";
-            this.tbCliente.Size = new System.Drawing.Size(443, 25);
-            this.tbCliente.TabIndex = 1;
-            // 
             // lblTituloFecha
             // 
             this.lblTituloFecha.AutoSize = true;
-            this.lblTituloFecha.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblTituloFecha.Location = new System.Drawing.Point(545, 58);
+            this.lblTituloFecha.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloFecha.Location = new System.Drawing.Point(547, 65);
             this.lblTituloFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTituloFecha.Name = "lblTituloFecha";
-            this.lblTituloFecha.Size = new System.Drawing.Size(51, 19);
+            this.lblTituloFecha.Size = new System.Drawing.Size(72, 25);
             this.lblTituloFecha.TabIndex = 2;
             this.lblTituloFecha.Text = "FECHA";
             // 
             // lblTituloHora
             // 
             this.lblTituloHora.AutoSize = true;
-            this.lblTituloHora.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblTituloHora.Location = new System.Drawing.Point(697, 58);
+            this.lblTituloHora.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloHora.Location = new System.Drawing.Point(699, 65);
             this.lblTituloHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTituloHora.Name = "lblTituloHora";
-            this.lblTituloHora.Size = new System.Drawing.Size(47, 19);
+            this.lblTituloHora.Size = new System.Drawing.Size(66, 25);
             this.lblTituloHora.TabIndex = 3;
             this.lblTituloHora.Text = "HORA";
-            this.lblTituloHora.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblFecha.Location = new System.Drawing.Point(540, 112);
+            this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(529, 106);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(58, 19);
+            this.lblFecha.Size = new System.Drawing.Size(84, 25);
             this.lblFecha.TabIndex = 4;
             this.lblFecha.Text = "lblFecha";
             // 
             // lblHora
             // 
             this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblHora.Location = new System.Drawing.Point(692, 112);
+            this.lblHora.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.Location = new System.Drawing.Point(699, 105);
             this.lblHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(53, 19);
+            this.lblHora.Size = new System.Drawing.Size(79, 25);
             this.lblHora.TabIndex = 5;
             this.lblHora.Text = "lblHora";
             // 
             // gbDatosVenta
             // 
+            this.gbDatosVenta.Controls.Add(this.tbCantidad);
+            this.gbDatosVenta.Controls.Add(this.lblTituloCantidad);
             this.gbDatosVenta.Controls.Add(this.btnRegistrar);
             this.gbDatosVenta.Controls.Add(this.btnCancel);
             this.gbDatosVenta.Controls.Add(this.lblPrecio);
@@ -158,63 +161,86 @@
             this.gbDatosVenta.TabStop = false;
             this.gbDatosVenta.Text = "DATOS DE LA VENTA";
             // 
-            // lblProducto
+            // tbCantidad
             // 
-            this.lblProducto.AutoSize = true;
-            this.lblProducto.Location = new System.Drawing.Point(7, 31);
-            this.lblProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(82, 19);
-            this.lblProducto.TabIndex = 2;
-            this.lblProducto.Text = "PRODUCTO";
+            this.tbCantidad.Location = new System.Drawing.Point(396, 64);
+            this.tbCantidad.Margin = new System.Windows.Forms.Padding(4);
+            this.tbCantidad.Name = "tbCantidad";
+            this.tbCantidad.Size = new System.Drawing.Size(143, 25);
+            this.tbCantidad.TabIndex = 2;
             // 
-            // cobProducto
+            // lblTituloCantidad
             // 
-            this.cobProducto.FormattingEnabled = true;
-            this.cobProducto.Location = new System.Drawing.Point(11, 54);
-            this.cobProducto.Name = "cobProducto";
-            this.cobProducto.Size = new System.Drawing.Size(294, 25);
-            this.cobProducto.TabIndex = 3;
-            // 
-            // lblTituloPrecio
-            // 
-            this.lblTituloPrecio.AutoSize = true;
-            this.lblTituloPrecio.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblTituloPrecio.Location = new System.Drawing.Point(446, 31);
-            this.lblTituloPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTituloPrecio.Name = "lblTituloPrecio";
-            this.lblTituloPrecio.Size = new System.Drawing.Size(56, 19);
-            this.lblTituloPrecio.TabIndex = 7;
-            this.lblTituloPrecio.Text = "PRECIO";
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblPrecio.Location = new System.Drawing.Point(446, 54);
-            this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(60, 19);
-            this.lblPrecio.TabIndex = 8;
-            this.lblPrecio.Text = "lblPrecio";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(641, 22);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(126, 34);
-            this.btnCancel.TabIndex = 9;
-            this.btnCancel.Text = "CANCELAR";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.lblTituloCantidad.AutoSize = true;
+            this.lblTituloCantidad.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloCantidad.Location = new System.Drawing.Point(414, 30);
+            this.lblTituloCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTituloCantidad.Name = "lblTituloCantidad";
+            this.lblTituloCantidad.Size = new System.Drawing.Size(110, 25);
+            this.lblTituloCantidad.TabIndex = 11;
+            this.lblTituloCantidad.Text = "CANTIDAD";
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(641, 62);
+            this.btnRegistrar.Location = new System.Drawing.Point(754, 62);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(126, 34);
             this.btnRegistrar.TabIndex = 10;
             this.btnRegistrar.Text = "REGISTRAR";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(754, 22);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(126, 34);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "CANCELAR";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Location = new System.Drawing.Point(618, 54);
+            this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(90, 25);
+            this.lblPrecio.TabIndex = 8;
+            this.lblPrecio.Text = "lblPrecio";
+            // 
+            // lblTituloPrecio
+            // 
+            this.lblTituloPrecio.AutoSize = true;
+            this.lblTituloPrecio.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloPrecio.Location = new System.Drawing.Point(623, 30);
+            this.lblTituloPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTituloPrecio.Name = "lblTituloPrecio";
+            this.lblTituloPrecio.Size = new System.Drawing.Size(78, 25);
+            this.lblTituloPrecio.TabIndex = 7;
+            this.lblTituloPrecio.Text = "PRECIO";
+            // 
+            // cobProducto
+            // 
+            this.cobProducto.FormattingEnabled = true;
+            this.cobProducto.Location = new System.Drawing.Point(11, 65);
+            this.cobProducto.Name = "cobProducto";
+            this.cobProducto.Size = new System.Drawing.Size(294, 25);
+            this.cobProducto.TabIndex = 3;
+            this.cobProducto.SelectedIndexChanged += new System.EventHandler(this.cobProducto_SelectedIndexChanged);
+            // 
+            // lblProducto
+            // 
+            this.lblProducto.AutoSize = true;
+            this.lblProducto.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProducto.Location = new System.Drawing.Point(7, 30);
+            this.lblProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProducto.Name = "lblProducto";
+            this.lblProducto.Size = new System.Drawing.Size(114, 25);
+            this.lblProducto.TabIndex = 2;
+            this.lblProducto.Text = "PRODUCTO";
             // 
             // lvRegistro
             // 
@@ -301,10 +327,11 @@
             this.Controls.Add(this.gbDatosCliente);
             this.Controls.Add(this.lblVentas);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control de ventas de producto";
+            this.Load += new System.EventHandler(this.frmVentas_Load);
             this.gbDatosCliente.ResumeLayout(false);
             this.gbDatosCliente.PerformLayout();
             this.gbDatosVenta.ResumeLayout(false);
@@ -340,6 +367,8 @@
         private System.Windows.Forms.ColumnHeader colNeto;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblTituloTotal;
+        private System.Windows.Forms.Label lblTituloCantidad;
+        private System.Windows.Forms.TextBox tbCantidad;
     }
 }
 
