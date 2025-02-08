@@ -35,8 +35,10 @@
             this.cobTipoE = new System.Windows.Forms.ComboBox();
             this.btnAgregarE = new System.Windows.Forms.Button();
             this.lvMostrarE = new System.Windows.Forms.ListView();
+            this.colNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSalir = new System.Windows.Forms.Button();
-            this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colTipoE = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colSalario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -51,9 +53,10 @@
             // 
             // tbNombreE
             // 
+            this.tbNombreE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNombreE.Location = new System.Drawing.Point(43, 136);
             this.tbNombreE.Name = "tbNombreE";
-            this.tbNombreE.Size = new System.Drawing.Size(185, 20);
+            this.tbNombreE.Size = new System.Drawing.Size(185, 29);
             this.tbNombreE.TabIndex = 2;
             // 
             // label2
@@ -78,10 +81,11 @@
             // 
             // cobTipoE
             // 
+            this.cobTipoE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cobTipoE.FormattingEnabled = true;
             this.cobTipoE.Location = new System.Drawing.Point(313, 136);
             this.cobTipoE.Name = "cobTipoE";
-            this.cobTipoE.Size = new System.Drawing.Size(185, 21);
+            this.cobTipoE.Size = new System.Drawing.Size(185, 29);
             this.cobTipoE.TabIndex = 4;
             // 
             // btnAgregarE
@@ -97,7 +101,11 @@
             // lvMostrarE
             // 
             this.lvMostrarE.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Nombre});
+            this.colNombre,
+            this.colTipoE,
+            this.colSalario});
+            this.lvMostrarE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvMostrarE.GridLines = true;
             this.lvMostrarE.HideSelection = false;
             this.lvMostrarE.Location = new System.Drawing.Point(12, 241);
             this.lvMostrarE.Name = "lvMostrarE";
@@ -105,6 +113,11 @@
             this.lvMostrarE.TabIndex = 6;
             this.lvMostrarE.UseCompatibleStateImageBehavior = false;
             this.lvMostrarE.View = System.Windows.Forms.View.Details;
+            // 
+            // colNombre
+            // 
+            this.colNombre.Text = "Nombre";
+            this.colNombre.Width = 180;
             // 
             // btnSalir
             // 
@@ -115,6 +128,16 @@
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // colTipoE
+            // 
+            this.colTipoE.Text = "Tipo Empleado";
+            this.colTipoE.Width = 180;
+            // 
+            // colSalario
+            // 
+            this.colSalario.Text = "Salario";
+            this.colSalario.Width = 176;
             // 
             // Form1
             // 
@@ -146,8 +169,10 @@
         private System.Windows.Forms.ComboBox cobTipoE;
         private System.Windows.Forms.Button btnAgregarE;
         private System.Windows.Forms.ListView lvMostrarE;
-        private System.Windows.Forms.ColumnHeader Nombre;
+        private System.Windows.Forms.ColumnHeader colNombre;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ColumnHeader colTipoE;
+        private System.Windows.Forms.ColumnHeader colSalario;
     }
 }
 
