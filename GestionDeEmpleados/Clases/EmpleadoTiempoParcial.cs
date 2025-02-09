@@ -11,13 +11,13 @@ namespace GestionDeEmpleados.Clases
         public int HorasTrabajadas {  get; set; }
         public double PagoPorHora { get; set; }
 
-        public EmpleadoTiempoParcial(int id, string nombre, double salarioBase, int horasTrabajadas, double pagoPorHora) : base(id, nombre, salarioBase)
+        public EmpleadoTiempoParcial(int id, string nombre, string tipoEmpleado, double salarioBase, int horasTrabajadas, double pagoPorHora) : base(id, nombre, tipoEmpleado, salarioBase)
         {
             HorasTrabajadas = horasTrabajadas;
             PagoPorHora = pagoPorHora;
         }
 
-        public override double CalcularSalarioBase()
+        public override double CalcularSalario()
         {
             return HorasTrabajadas * PagoPorHora;
         }

@@ -10,12 +10,12 @@ namespace GestionDeEmpleados.Clases
     {
         public double Bono {  get; set; }
 
-        public EmpleadoTiempoCompleto(int id, string nombre, double salarioBase, double bono) : base(id, nombre, salarioBase)
+        public EmpleadoTiempoCompleto(int id, string nombre, string tipoEmpleado, double salarioBase, double bono) : base(id, nombre, tipoEmpleado, salarioBase)
         {
             Bono = bono;
         }
 
-        public override double CalcularSalarioBase()
+        public override double CalcularSalario()
         {
             return SalarioBase + Bono;
         }

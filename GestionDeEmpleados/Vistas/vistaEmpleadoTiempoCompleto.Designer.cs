@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbBono = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -44,13 +44,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DIGITE EL BONO DEL EMPELADO";
             // 
-            // textBox1
+            // tbBono
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(41, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 29);
-            this.textBox1.TabIndex = 1;
+            this.tbBono.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbBono.Location = new System.Drawing.Point(41, 43);
+            this.tbBono.Name = "tbBono";
+            this.tbBono.Size = new System.Drawing.Size(252, 29);
+            this.tbBono.TabIndex = 1;
             // 
             // btnAceptar
             // 
@@ -61,6 +61,7 @@
             this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnSalir
             // 
@@ -80,7 +81,7 @@
             this.ClientSize = new System.Drawing.Size(332, 128);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbBono);
             this.Controls.Add(this.label1);
             this.Name = "vistaEmpleadoTiempoCompleto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -93,7 +94,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbBono;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnSalir;
     }

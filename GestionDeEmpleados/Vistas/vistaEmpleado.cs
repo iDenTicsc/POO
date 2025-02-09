@@ -28,7 +28,7 @@ namespace GestionDeEmpleados
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Desea salir de la aplicación?", "Geje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult r = MessageBox.Show("Desea salir de la aplicación?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (r == DialogResult.Yes)
             {
@@ -50,25 +50,48 @@ namespace GestionDeEmpleados
             }
         }
 
-        private void LimpiarFormulario()
+        public void LimpiarFormulario()
         {
             tbNombreE.Text = string.Empty;
             cobTipoE.SelectedIndex = -1;
             tbSalarioBase.Text = string.Empty;
         }
 
-        private void cobTipoE_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnAgregarEmpleado_Click(object sender, EventArgs e)
         {
+            int id = 0;
+
             if(cobTipoE.SelectedItem != null && cobTipoE.SelectedItem.ToString() == "Tiempo Completo")
             {
-                vistaEmpleadoTiempoCompleto vTiempoCompleto = new vistaEmpleadoTiempoCompleto();
+                vistaEmpleadoTiempoCompleto vTiempoCompleto = new vistaEmpleadoTiempoCompleto(this);
+                vTiempoCompleto.id = id;
+                vTiempoCompleto.Nombre = tbNombreE.Text;
+                vTiempoCompleto.TipoEmpleado = cobTipoE.SelectedItem.ToString();
+                vTiempoCompleto.SalarioBase = double.Parse(tbSalarioBase.Text);
                 vTiempoCompleto.Show();
             }
-            if(cobTipoE.SelectedItem != null && cobTipoE.SelectedItem.ToString() == "Tiempo Parcial")
+            if (cobTipoE.SelectedItem != null && cobTipoE.SelectedItem.ToString() == "Tiempo Parcial")
             {
                 vistaEmpleadoTiempoParcial vTiempoParcial = new vistaEmpleadoTiempoParcial();
+                vTiempoParcial.id = id;
+                vTiempoParcial.Nombre = tbNombreE.Text;
+                vTiempoParcial.SalarioBase = double.Parse(tbSalarioBase.Text);
                 vTiempoParcial.Show();
             }
+        }
+
+        public void ActualizarLista()
+        {
+            lvMostrarE.Items.Clear();
+
+            foreach (var emp in _controllerEmpleado.ObtenerEmpleados())
+            {
+                ListViewItem Fila = new ListViewItem(emp.Nombre);
+                Fila.SubItems.Add(emp.TipoEmpleado);
+                Fila.SubItems.Add(emp.CalcularSalario().ToString("C"));
+                lvMostrarE.Items.Add(Fila);
+            }
+            
         }
     }
 }

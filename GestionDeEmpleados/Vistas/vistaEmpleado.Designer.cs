@@ -90,7 +90,6 @@
             this.cobTipoE.Name = "cobTipoE";
             this.cobTipoE.Size = new System.Drawing.Size(185, 29);
             this.cobTipoE.TabIndex = 4;
-            this.cobTipoE.SelectedIndexChanged += new System.EventHandler(this.cobTipoE_SelectedIndexChanged);
             // 
             // lvMostrarE
             // 
@@ -161,6 +160,7 @@
             this.btnAgregarEmpleado.TabIndex = 10;
             this.btnAgregarEmpleado.Text = "Agregar Empleado";
             this.btnAgregarEmpleado.UseVisualStyleBackColor = true;
+            this.btnAgregarEmpleado.Click += new System.EventHandler(this.btnAgregarEmpleado_Click);
             // 
             // vistaEmpleado
             // 
