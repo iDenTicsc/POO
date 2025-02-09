@@ -38,10 +38,6 @@ namespace GestionDeEmpleados.Vistas
             double bono = double.Parse(tbBono.Text);
             _controllerEmpleado.AgregarEmpleado(new EmpleadoTiempoCompleto(id, Nombre, TipoEmpleado, SalarioBase, bono));
             List<Empleado> empleados = _controllerEmpleado.ObtenerEmpleados();
-            //foreach (var emp in empleados)
-            //{
-            //    Console.WriteLine($"Nombre: {emp.Nombre}, Tipo empleado: {emp.TipoEmpleado}, Salario: {emp.CalcularSalario()}");
-            //}
             vEmpleado.ActualizarLista(empleados);
             tbBono.Clear();
             DialogResult result = MessageBox.Show("Empleado agregado exitosamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

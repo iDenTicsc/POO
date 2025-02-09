@@ -91,18 +91,6 @@ namespace GestionDeEmpleados
                 lvMostrarE.Items.Add(Fila);
             }
             
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            _controllerEmpleado.AgregarEmpleado(new EmpleadoTiempoCompleto(0, "a", "Tiempo completo", 10.1, 1));
-
-            List<Empleado> empleados = _controllerEmpleado.ObtenerEmpleados();
-
-            foreach (var emp in empleados)
-            {
-                Console.WriteLine($"Nombre: {emp.Nombre}, Tipo empleado: {emp.TipoEmpleado}, Salario: {emp.CalcularSalario()}");
-            }
-        }
+        }       
     }
 }
