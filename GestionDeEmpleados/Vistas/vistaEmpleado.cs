@@ -1,4 +1,5 @@
-﻿using GestionDeEmpleados.Controladores;
+﻿using GestionDeEmpleados.Clases;
+using GestionDeEmpleados.Controladores;
 using GestionDeEmpleados.Vistas;
 using System;
 using System.Collections;
@@ -80,11 +81,9 @@ namespace GestionDeEmpleados
             }
         }
 
-        public void ActualizarLista()
+        public void ActualizarLista(List<Empleado> empleados)
         {
-            lvMostrarE.Items.Clear();
-
-            foreach (var emp in _controllerEmpleado.ObtenerEmpleados())
+            foreach (var emp in empleados)
             {
                 ListViewItem Fila = new ListViewItem(emp.Nombre);
                 Fila.SubItems.Add(emp.TipoEmpleado);
@@ -92,6 +91,18 @@ namespace GestionDeEmpleados
                 lvMostrarE.Items.Add(Fila);
             }
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _controllerEmpleado.AgregarEmpleado(new EmpleadoTiempoCompleto(0, "a", "Tiempo completo", 10.1, 1));
+
+            List<Empleado> empleados = _controllerEmpleado.ObtenerEmpleados();
+
+            foreach (var emp in empleados)
+            {
+                Console.WriteLine($"Nombre: {emp.Nombre}, Tipo empleado: {emp.TipoEmpleado}, Salario: {emp.CalcularSalario()}");
+            }
         }
     }
 }
