@@ -38,8 +38,6 @@
             this.colTipoE = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colSalario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSalir = new System.Windows.Forms.Button();
-            this.lbTituloSalarioB = new System.Windows.Forms.Label();
-            this.tbSalarioBase = new System.Windows.Forms.TextBox();
             this.btnAgregarEmpleado = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -47,7 +45,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(221, 9);
+            this.label1.Location = new System.Drawing.Point(249, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(362, 40);
             this.label1.TabIndex = 0;
@@ -56,7 +54,7 @@
             // tbNombreE
             // 
             this.tbNombreE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNombreE.Location = new System.Drawing.Point(56, 136);
+            this.tbNombreE.Location = new System.Drawing.Point(196, 136);
             this.tbNombreE.Name = "tbNombreE";
             this.tbNombreE.Size = new System.Drawing.Size(185, 29);
             this.tbNombreE.TabIndex = 2;
@@ -65,7 +63,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(35, 95);
+            this.label2.Location = new System.Drawing.Point(175, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(228, 25);
             this.label2.TabIndex = 1;
@@ -75,7 +73,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(324, 95);
+            this.label3.Location = new System.Drawing.Point(464, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 25);
             this.label3.TabIndex = 3;
@@ -86,7 +84,7 @@
             this.cobTipoE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cobTipoE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cobTipoE.FormattingEnabled = true;
-            this.cobTipoE.Location = new System.Drawing.Point(326, 136);
+            this.cobTipoE.Location = new System.Drawing.Point(466, 136);
             this.cobTipoE.Name = "cobTipoE";
             this.cobTipoE.Size = new System.Drawing.Size(185, 29);
             this.cobTipoE.TabIndex = 4;
@@ -133,24 +131,6 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // lbTituloSalarioB
-            // 
-            this.lbTituloSalarioB.AutoSize = true;
-            this.lbTituloSalarioB.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lbTituloSalarioB.Location = new System.Drawing.Point(609, 91);
-            this.lbTituloSalarioB.Name = "lbTituloSalarioB";
-            this.lbTituloSalarioB.Size = new System.Drawing.Size(142, 25);
-            this.lbTituloSalarioB.TabIndex = 8;
-            this.lbTituloSalarioB.Text = "SALARIO BASE";
-            // 
-            // tbSalarioBase
-            // 
-            this.tbSalarioBase.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSalarioBase.Location = new System.Drawing.Point(585, 134);
-            this.tbSalarioBase.Name = "tbSalarioBase";
-            this.tbSalarioBase.Size = new System.Drawing.Size(185, 29);
-            this.tbSalarioBase.TabIndex = 9;
-            // 
             // btnAgregarEmpleado
             // 
             this.btnAgregarEmpleado.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -168,8 +148,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 551);
             this.Controls.Add(this.btnAgregarEmpleado);
-            this.Controls.Add(this.tbSalarioBase);
-            this.Controls.Add(this.lbTituloSalarioB);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lvMostrarE);
             this.Controls.Add(this.cobTipoE);
@@ -198,8 +176,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ColumnHeader colTipoE;
         private System.Windows.Forms.ColumnHeader colSalario;
-        private System.Windows.Forms.Label lbTituloSalarioB;
-        private System.Windows.Forms.TextBox tbSalarioBase;
         private System.Windows.Forms.Button btnAgregarEmpleado;
     }
 }

@@ -55,7 +55,6 @@ namespace GestionDeEmpleados
         {
             tbNombreE.Text = string.Empty;
             cobTipoE.SelectedIndex = -1;
-            tbSalarioBase.Text = string.Empty;
         }
 
         private void btnAgregarEmpleado_Click(object sender, EventArgs e)
@@ -68,15 +67,14 @@ namespace GestionDeEmpleados
                 vTiempoCompleto.id = id;
                 vTiempoCompleto.Nombre = tbNombreE.Text;
                 vTiempoCompleto.TipoEmpleado = cobTipoE.SelectedItem.ToString();
-                vTiempoCompleto.SalarioBase = double.Parse(tbSalarioBase.Text);
                 vTiempoCompleto.Show();
             }
             if (cobTipoE.SelectedItem != null && cobTipoE.SelectedItem.ToString() == "Tiempo Parcial")
             {
-                vistaEmpleadoTiempoParcial vTiempoParcial = new vistaEmpleadoTiempoParcial();
+                vistaEmpleadoTiempoParcial vTiempoParcial = new vistaEmpleadoTiempoParcial(this);
                 vTiempoParcial.id = id;
                 vTiempoParcial.Nombre = tbNombreE.Text;
-                vTiempoParcial.SalarioBase = double.Parse(tbSalarioBase.Text);
+                vTiempoParcial.TipoEmpleado = cobTipoE.SelectedItem.ToString();
                 vTiempoParcial.Show();
             }
         }

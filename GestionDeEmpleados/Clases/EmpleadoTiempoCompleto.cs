@@ -8,10 +8,12 @@ namespace GestionDeEmpleados.Clases
 {
     public class EmpleadoTiempoCompleto : Empleado
     {
+        public double SalarioBase { get; set; }
         public double Bono {  get; set; }
 
-        public EmpleadoTiempoCompleto(int id, string nombre, string tipoEmpleado, double salarioBase, double bono) : base(id, nombre, tipoEmpleado, salarioBase)
+        public EmpleadoTiempoCompleto(int id, string nombre, string tipoEmpleado, double salarioBase, double bono) : base(id, nombre, tipoEmpleado)
         {
+            SalarioBase = salarioBase;
             Bono = bono;
         }
 

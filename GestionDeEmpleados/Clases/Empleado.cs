@@ -11,15 +11,13 @@ namespace GestionDeEmpleados.Clases
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public string TipoEmpleado {  get; set; }
-        public double SalarioBase { get; set; }
+        public string TipoEmpleado { get; set; }
 
-        public Empleado(int id, string nombre, string tipoEmpleado, double salarioBase)
+        public Empleado(int id, string nombre, string tipoEmpleado)
         {
             Id = id;
             Nombre = nombre;
             TipoEmpleado = tipoEmpleado;
-            SalarioBase = salarioBase;
         }
 
         //Metodo abstracto para polimorfismo

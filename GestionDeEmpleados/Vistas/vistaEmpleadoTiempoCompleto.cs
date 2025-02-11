@@ -17,7 +17,6 @@ namespace GestionDeEmpleados.Vistas
         public int id { get; set; }
         public string Nombre { get; set; }
         public string TipoEmpleado {  get; set; }
-        public double SalarioBase { get; set; }
 
         private vistaEmpleado vEmpleado;
 
@@ -35,11 +34,16 @@ namespace GestionDeEmpleados.Vistas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            double SalarioBase = double.Parse(tbSalarioBase.Text);
             double bono = double.Parse(tbBono.Text);
+
             _controllerEmpleado.AgregarEmpleado(new EmpleadoTiempoCompleto(id, Nombre, TipoEmpleado, SalarioBase, bono));
+
             List<Empleado> empleados = _controllerEmpleado.ObtenerEmpleados();
+
             vEmpleado.ActualizarLista(empleados);
             tbBono.Clear();
+
             DialogResult result = MessageBox.Show("Empleado agregado exitosamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             vEmpleado.LimpiarFormulario();
             this.Close();

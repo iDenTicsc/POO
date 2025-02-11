@@ -11,7 +11,7 @@ namespace GestionDeEmpleados.Clases
         public int HorasTrabajadas {  get; set; }
         public double PagoPorHora { get; set; }
 
-        public EmpleadoTiempoParcial(int id, string nombre, string tipoEmpleado, double salarioBase, int horasTrabajadas, double pagoPorHora) : base(id, nombre, tipoEmpleado, salarioBase)
+        public EmpleadoTiempoParcial(int id, string nombre, string tipoEmpleado,int horasTrabajadas, double pagoPorHora) : base(id, nombre, tipoEmpleado)
         {
             HorasTrabajadas = horasTrabajadas;
             PagoPorHora = pagoPorHora;
